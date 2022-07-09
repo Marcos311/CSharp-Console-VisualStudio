@@ -10,7 +10,7 @@ namespace Curso_Do_Sustenido
     {
         static void Main(string[] args)
         {
-            AULA07.Constante();
+            AULA08.LendoValoresTeclado();
         }
     }
 }
