@@ -46,6 +46,10 @@
     <Compile Include="AULA06.cs" />
     <Compile Include="AULA07.cs" />
     <Compile Include="AULA08.cs" />
+    <Compile Include="AULA09.cs" />
+    <Compile Include="AULA10.cs" />
+    <Compile Include="Aula11.cs" />
+    <Compile Include="AULA12.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

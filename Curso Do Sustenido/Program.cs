@@ -10,7 +10,7 @@ namespace Curso_Do_Sustenido
     {
         static void Main(string[] args)
         {
-            AULA08.LendoValoresTeclado();
+            AULA12.If();
         }
     }
 }
