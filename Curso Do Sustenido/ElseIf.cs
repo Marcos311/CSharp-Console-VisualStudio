@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Curso_Do_Sustenido
 {
-    class AULA12
+    class ElseIf
     {
-        public static void If()
+        public static void IfElse()
         {
             int n1, n2, n3, n4, res;
             res = n1 = n2 = n3 = n4 = 0;
-            string resultado = "Reprovado";
+            string resultado;
 
             Console.WriteLine("Digite a nota 1: ");
             n1 = int.Parse(Console.ReadLine());
@@ -25,11 +25,26 @@ namespace Curso_Do_Sustenido
 
             res = n1 + n2 + n3 + n4;
 
-            if (res >= 60) {
+            //>=60 Aprovado
+            //50 e 40 - Recuperação
+            //<40 - Reprovado
+
+            //65
+
+            if (res < 40)
+            {
+                resultado = "Reprovado";
+            }
+            else if (res < 60)
+            {
+                resultado = "Recuperação";
+            }
+            else
+            {
                 resultado = "Aprovado";
             }
 
-            Console.WriteLine("Nota: {0} - Resultado: {1}",res,resultado);
+            Console.WriteLine("Nota: {0} - Resultado: {1}", res, resultado);
 
             Console.ReadKey();
         }

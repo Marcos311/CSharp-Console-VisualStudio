@@ -49,9 +49,12 @@
     <Compile Include="AULA09.cs" />
     <Compile Include="AULA10.cs" />
     <Compile Include="Aula11.cs" />
-    <Compile Include="AULA12.cs" />
+    <Compile Include="If.cs" />
+    <Compile Include="ElseIf.cs" />
+    <Compile Include="IFANINHADO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWITCHCASE.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
