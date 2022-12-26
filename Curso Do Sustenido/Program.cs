@@ -10,7 +10,8 @@ namespace Curso_Do_Sustenido
     {
         static void Main(string[] args)
         {
-            SWITCHCASE.SwitchCase();
+            Vetores vetor = new Vetores();
+            vetor.elementosVetor();
         }
     }
 }
