@@ -10,8 +10,8 @@ namespace Curso_Do_Sustenido
     {
         static void Main(string[] args)
         {
-            Vetores vetor = new Vetores();
-            vetor.elementosVetor();
+            exerciciosArray array = new exerciciosArray();
+            array.exercicio2();
         }
     }
 }
