@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Curso_Do_Sustenido
 {
-    class Program
+    class Executavel
     {
-        static void Main(string[] args)
+        public void main(string[] args)
         {
             Exercicio3.exercicio3();
         }

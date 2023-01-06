@@ -49,6 +49,8 @@
     <Compile Include="AULA09.cs" />
     <Compile Include="AULA10.cs" />
     <Compile Include="Aula11.cs" />
+    <Compile Include="Executavel.cs" />
+    <Compile Include="Exercicio3.cs" />
     <Compile Include="exerciciosArray.cs" />
     <Compile Include="If.cs" />
     <Compile Include="ElseIf.cs" />
