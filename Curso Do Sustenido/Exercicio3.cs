@@ -47,7 +47,8 @@ namespace Curso_Do_Sustenido
                     cont = cont++;
                 }
             }
-            double percetage = (double) cont / N * 100.0;
+            double percetage = (double) 
+                cont / N * 100.0;
             Console.WriteLine("People under the age of sixteen: " + percetage.ToString("F2", CultureInfo.InvariantCulture) + "%");
 
             Console.ReadKey();

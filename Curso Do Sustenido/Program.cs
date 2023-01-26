@@ -10,7 +10,7 @@ namespace Curso_Do_Sustenido
     {
         static void Main(string[] args)
         {
-            Exercicio3.exercicio3();
+            ExerciciosVetor.exercicio2();
         }
     }
 }

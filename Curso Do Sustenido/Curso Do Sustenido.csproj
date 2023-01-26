@@ -52,6 +52,8 @@
     <Compile Include="Executavel.cs" />
     <Compile Include="Exercicio3.cs" />
     <Compile Include="exerciciosArray.cs" />
+    <Compile Include="ExerciciosVetor.cs" />
+    <Compile Include="FOREACH.cs" />
     <Compile Include="If.cs" />
     <Compile Include="ElseIf.cs" />
     <Compile Include="IFANINHADO.cs" />
