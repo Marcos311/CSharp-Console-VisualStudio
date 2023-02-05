@@ -78,5 +78,74 @@ namespace Curso_Do_Sustenido
             Console.ReadKey();
 
         }
+
+        public static void exercicio3()
+        {
+
+            int N;
+
+            N = int.Parse(Console.ReadLine());
+
+            int[] vetA = new int[N];
+            int[] vetB = new int[N];
+            int[] vetC = new int[N];
+
+            string[] stringA = Console.ReadLine().Split(' ');
+            string[] stringB = Console.ReadLine().Split(' ');
+
+            for(int i = 0; i < N; i++)
+            {
+                vetA[i] = int.Parse(stringA[i]);
+                vetB[i] = int.Parse(stringB[i]);
+            }
+
+            for(int i = 0; i < N; i++)
+            {
+                vetC[i] = vetA[i] + vetB[i];
+            }
+
+            for(int i =0; i < N; i++)
+            {
+                Console.Write(vetC[i] + " ");
+            }
+
+            Console.ReadKey();
+        }
+
+        public static void exercise4()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            double[] values = new double[N];
+
+            string[] s = Console.ReadLine().Split(' ');
+
+            for(int i = 0; i < N; i++)
+            {
+                values[i] = double.Parse(s[i], CultureInfo.InvariantCulture);
+            }
+
+            double sum = 0.0;
+
+            for(int i = 0; i < N; i++)
+            {
+                sum = sum + values[i];
+            }
+
+            double average = sum / N;
+            
+            Console.WriteLine("AVERAGE = " + average.ToString("F3", CultureInfo.InvariantCulture));
+
+            for(int i = 0; i < N; i++)
+            {
+                if (values[i] < average)
+                {
+                    Console.WriteLine(values[i].ToString("F1", CultureInfo.InvariantCulture));
+                }
+            }
+
+            Console.ReadKey();
+
+        }
     }
 }
