@@ -147,5 +147,43 @@ namespace Curso_Do_Sustenido
             Console.ReadKey();
 
         }
+
+        public static void exercise5()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            int[] array = new int[N];
+
+            string[] v = Console.ReadLine().Split();
+
+            for(int i = 0; i < N; i++)
+            {
+                array[i] = int.Parse(v[i]);
+            }
+
+            double sum = 0;
+            int count = 0;
+
+            for(int i=0; i < N; i++)
+            {
+                if(array[i] % 2 == 0)
+                {
+                    sum += array[i];
+                    count += 1;
+                }
+            }
+
+            if(count == 0)
+            {
+                Console.WriteLine("there was no even number");
+            }
+            else
+            {
+                sum = sum / count;
+                Console.WriteLine(sum.ToString("F1", CultureInfo.InvariantCulture));
+            }
+
+            Console.ReadKey();
+        }
     }
 }
