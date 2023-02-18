@@ -185,5 +185,146 @@ namespace Curso_Do_Sustenido
 
             Console.ReadKey();
         }
+
+        public static void exercise6()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            string[] name = new string[N];
+            int[] age = new int[N];
+
+            for(int i=0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+
+                name[i] = s[0];
+                age[i] = int.Parse(s[1]);
+            }
+
+            string answerName = name[0];
+            int answerAge = 0;
+
+            for(int i=0; i < N; i++)
+            {
+                if(age[i] > answerAge)
+                {
+                    answerAge = age[i];
+                    answerName = name[i];
+                }
+            }
+
+            Console.WriteLine("Older Person : " + answerName);
+
+            Console.ReadKey();
+        }
+
+        public static void exercise7()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            String[] name = new string[N];
+            double[] gradeFirstSemester = new double[N];
+            double[] gradeSecondSemester = new double[N];
+
+            for(int i=0; i < N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+
+                name[i] = s[0];
+                gradeFirstSemester[i] = double.Parse(s[1], CultureInfo.InvariantCulture);
+                gradeSecondSemester[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
+            }
+
+            Console.WriteLine("Approved Students :");
+
+            for(int i=0; i<N; i++)
+            {
+                double media = (gradeFirstSemester[i] + gradeSecondSemester[i]) / 2.0;
+
+                if(media >= 6.0)
+                {
+                    Console.WriteLine(name[i]);
+                }
+            }
+
+            Console.ReadKey();
+        }
+
+        public static void exercise8()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            double[] height = new double[N];
+            char[] sex = new char[N];
+
+            for(int i=0; i<N; i++)
+            {
+                string[] s = Console.ReadLine().Split(' ');
+
+                height[i] = double.Parse(s[0], CultureInfo.InvariantCulture);
+                sex[i] = char.Parse(s[1]);
+            }
+
+            double shorterHeight = height[0];
+
+            for(int i=0; i<N; i++)
+            {
+                if(height[i] < shorterHeight)
+                {
+                    shorterHeight = height[i];
+                }
+            }
+
+            double greaterHeight = 0.0;
+
+            for(int i=0; i<N; i++)
+            {
+                if(height[i] > greaterHeight)
+                {
+                    greaterHeight = height[i];
+                }
+            }
+
+            int countF = 0;
+            double sumHeighterWomens = 0.0;
+
+            for(int i = 0; i<N; i++)
+            {
+                if(sex[i] == 'F')
+                {
+                    sumHeighterWomens = sumHeighterWomens + height[i];
+                    countF++;
+                }
+            }
+
+
+            double average = sumHeighterWomens / countF;
+
+            double countM = 0.0;
+
+            for(int i=0; i<N; i++)
+            {
+                if(sex[i] == 'M')
+                {
+                    countM++;
+                }
+            }
+
+            Console.WriteLine("Shorter Height : " + shorterHeight.ToString("F2", CultureInfo.InvariantCulture));
+
+            Console.WriteLine("Greater Height : " + greaterHeight.ToString("F2", CultureInfo.InvariantCulture));
+
+            if(countF == 0){
+                Console.WriteLine("There is no woman among the people");
+            }
+            else
+            {
+                Console.WriteLine("Average Height of women : " + average.ToString("F2", CultureInfo.InvariantCulture));
+            }
+
+            Console.WriteLine("Number of men : " + countM);
+
+            Console.ReadKey();
+        }
     }
 }
