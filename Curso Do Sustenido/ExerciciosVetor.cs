@@ -326,5 +326,65 @@ namespace Curso_Do_Sustenido
 
             Console.ReadKey();
         }
+
+        public static void exercise9()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            string[] name = new string[N];
+            double[] purchasePrice = new double[N];
+            double[] salePrice = new double[N];
+
+            for(int i=0; i<N; i++)
+            {
+                string[] v = Console.ReadLine().Split(' ');
+
+                name[i] = v[0];
+                purchasePrice[i] = double.Parse(v[1], CultureInfo.InvariantCulture);
+                salePrice[i] = double.Parse(v[2], CultureInfo.InvariantCulture);
+            }
+
+            int profitBelowTen = 0;
+            int profitBetweenTenAndTwelve = 0;
+            int profitAboveTwelve = 0;
+
+            for(int i=0; i<N; i++)
+            {
+                double lucro = salePrice[i] - purchasePrice[i];
+                double percentage = lucro / purchasePrice[i] * 100.0;
+
+                if(percentage < 10.0)
+                {
+                    profitBelowTen++;
+                }
+                else if(percentage <= 20.0)
+                {
+                    profitBetweenTenAndTwelve++;
+                }
+                else{
+                    profitAboveTwelve++;
+                }
+            }
+
+            double sumPurchase = 0.0;
+            double sumSale = 0.0;
+
+            for(int i=0; i<N; i++)
+            {
+                sumPurchase += purchasePrice[i];
+                sumSale += salePrice[i];
+            }
+
+            double totalProfit = sumSale - sumPurchase;
+
+            Console.WriteLine("Profit Below 10% : " + profitBelowTen);
+            Console.WriteLine("Profit Between 10% and 20% : " + profitBetweenTenAndTwelve);
+            Console.WriteLine("Profit Above 20% : " + profitAboveTwelve);
+            Console.WriteLine("Total Purchase Amount : " + sumPurchase.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Total Sale Amount : " + sumSale.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Total Profit : " + totalProfit.ToString("F2", CultureInfo.InvariantCulture));
+
+            Console.ReadKey();
+        }
     }
 }
