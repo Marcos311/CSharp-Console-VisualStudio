@@ -53,6 +53,8 @@
     <Compile Include="Exercicio3.cs" />
     <Compile Include="exerciciosArray.cs" />
     <Compile Include="ExerciciosVetor.cs" />
+    <Compile Include="EXERCISESMATRICE.cs" />
+    <Compile Include="EXTRAMATRIXEXERCISES.cs" />
     <Compile Include="FOREACH.cs" />
     <Compile Include="If.cs" />
     <Compile Include="ElseIf.cs" />
